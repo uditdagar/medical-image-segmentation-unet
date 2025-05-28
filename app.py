@@ -13,7 +13,7 @@ def preprocess_image(image):
     image = np.array(image).astype(np.float32) / 255.0
     if image.ndim == 2:
         image = np.expand_dims(image, axis=-1)
-    image = np.expand_dims(image, axis=0)  # Add batch dimension
+    image = np.expand_dims(image, axis=0)  
     return image
 
 def predict_mask(image):
@@ -34,15 +34,14 @@ if uploaded_file:
         st.subheader("Predicted Mask")
         st.image(pred_mask * 255, use_container_width=True, clamp=True)
 
-        # Overlay the mask on the original image
         resized_image = image.resize((128, 128))
         original_np = np.array(resized_image)
         if original_np.ndim == 2:
-            overlay = np.stack([original_np]*3, axis=-1)  # Convert grayscale to RGB
+            overlay = np.stack([original_np]*3, axis=-1)
         else:
             overlay = original_np.copy()
 
-        overlay[pred_mask == 1] = [255, 0, 0]  # Red mask overlay
+        overlay[pred_mask == 1] = [255, 0, 0]
 
         st.subheader("Overlay")
         st.image(overlay, use_container_width=True)
