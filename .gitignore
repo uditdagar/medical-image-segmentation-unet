@@ -1,0 +1,17 @@
+# Ignoring virtual environment
+venv/
+.env
+
+#Ignoring datasets
+frames/
+masks/
+predicted_masks/
+
+#Ignoring python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter checkpoints
+.ipynb_checkpoints
