@@ -6,3 +6,5 @@ scikit-learn
 albumentations
 nibabel
 streamlit
+keras
+Pillow
