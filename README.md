@@ -42,7 +42,7 @@ This project performs semantic segmentation on **COVID-19 CT scan images** using
 
 ## ✅ Evaluation
 
-After 7 epochs:
+After 20 epochs:
 - **Accuracy:** ~0.994
 - **Loss:** ~0.012
 - **Mean IoU:** ~0.49
