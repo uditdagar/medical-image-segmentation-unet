@@ -1,5 +1,6 @@
 # Ignoring virtual environment
 venv/
+venv310/
 .env
 
 #Ignoring datasets
